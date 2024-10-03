@@ -22,7 +22,8 @@ export async function getChampionsDetail(id: string) {
   const res = await fetch(
     `${BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`
   );
-  const data: ChampionTable = await res.json();
-  const championDetail = Object.values(data.data);
+  const data = await res.json();
+  const championDetail = data.data[id];
+
   return championDetail;
 }
