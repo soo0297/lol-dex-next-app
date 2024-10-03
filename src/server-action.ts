@@ -16,3 +16,13 @@ export async function getChampions() {
   const champion = Object.values(data.data);
   return champion;
 }
+
+export async function getChampionsDetail(id: string) {
+  const version = await getVersion();
+  const res = await fetch(
+    `${BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`
+  );
+  const data: ChampionTable = await res.json();
+  const championDetail = Object.values(data.data);
+  return championDetail;
+}
