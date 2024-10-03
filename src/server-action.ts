@@ -1,8 +1,9 @@
-import { BASE_URL } from "./app/api/api";
 import { ChampionTable } from "./types/champion";
 
 export async function getVersion() {
-  const res = await fetch(`${BASE_URL}/api/versions.json`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/versions.json`
+  );
   const data = await res.json();
   return data[0];
 }
@@ -10,7 +11,7 @@ export async function getVersion() {
 export async function getChampions() {
   const version = await getVersion();
   const res = await fetch(
-    `${BASE_URL}/cdn/${version}/data/ko_KR/champion.json`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion.json`
   );
   const data: ChampionTable = await res.json();
   const champion = Object.values(data.data);
@@ -20,7 +21,7 @@ export async function getChampions() {
 export async function getChampionsDetail(id: string) {
   const version = await getVersion();
   const res = await fetch(
-    `${BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`
   );
   const data = await res.json();
   const championDetail = data.data[id];

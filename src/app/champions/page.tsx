@@ -1,7 +1,6 @@
 import { getChampions, getVersion } from "@/server-action";
 import Image from "next/image";
 import Link from "next/link";
-import { BASE_URL } from "../api/api";
 
 export default async function ChampionListPage() {
   const version = await getVersion();
@@ -19,7 +18,7 @@ export default async function ChampionListPage() {
                   <Image
                     width={100}
                     height={100}
-                    src={`${BASE_URL}/cdn/${version}/img/champion/${champion.image.full}`}
+                    src={`${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/img/champion/${champion.image.full}`}
                     alt={champion.title}
                   />
                   <h2 className="mt-2 text-xl font-semibold">
