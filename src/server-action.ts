@@ -28,3 +28,15 @@ export async function getChampionsDetail(id: string) {
 
   return championDetail;
 }
+
+export async function getItems() {
+  const version = await getVersion();
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/item.json`
+  );
+  const data = await res.json();
+  console.log("data", data);
+  const item = Object.values(data.data);
+  //   console.log("item", item);
+  return item;
+}
