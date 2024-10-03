@@ -1,4 +1,5 @@
 import { ChampionTable } from "./types/champion";
+import { Item } from "./types/item";
 
 export async function getVersion() {
   const res = await fetch(
@@ -35,8 +36,6 @@ export async function getItems() {
     `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/item.json`
   );
   const data = await res.json();
-  console.log("data", data);
-  const item = Object.values(data.data);
-  //   console.log("item", item);
+  const item: Item[] = Object.values(data.data);
   return item;
 }

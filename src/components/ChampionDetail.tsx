@@ -6,8 +6,8 @@ const ChampionDetail = ({ data }: { data: ChampionTable[] }) => {
   return (
     <div>
       <Image
-        width={400}
-        height={400}
+        width={600}
+        height={600}
         src={`${process.env.NEXT_PUBLIC_BASE_URL}/cdn/img/champion/splash/${data[0].id}_0.jpg`}
         alt={data[0].title}
       />
@@ -20,7 +20,7 @@ const ChampionDetail = ({ data }: { data: ChampionTable[] }) => {
         <h3>스탯</h3>
         <ul
           role="list"
-          class="marker:text-red-500 list-disc pl-5  text-red-500"
+          className="marker:text-red-500 list-disc pl-5  text-red-500"
         >
           <li>공격력: {data[0].info.attack}</li>
           <li>방어력: {data[0].info.defense}</li>

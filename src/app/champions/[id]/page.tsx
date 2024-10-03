@@ -9,7 +9,7 @@ import { getChampionsDetail } from "@/server-action";
 
 const ChampionDetailPage = async ({ params }: { params: { id: string } }) => {
   const data = await getChampionsDetail(params.id);
-  //   console.log("data", data);
+
   return (
     <div>
       <ChampionDetail data={[data]} />
