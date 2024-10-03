@@ -8,7 +8,7 @@ export default async function ChampionListPage() {
 
   return (
     <div>
-      <h1 className="text-red-500 text-2xl font-bold mb-4">챔피언목록</h1>
+      <h1 className="text-red-500 text-2xl font-bold mb-4">챔피언 목록</h1>
       <div className="grid grid-cols-4 gap-4">
         {champions.map((champion) => {
           return (

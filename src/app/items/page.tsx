@@ -9,12 +9,12 @@ const ItemListPage = async () => {
 
   return (
     <div>
-      <h1 className="text-red-500 text-2xl font-bold mb-4">챔피언목록</h1>
-      <div className="grid grid-cols-5 gap-4">
+      <h1 className="text-red-500 text-2xl font-bold mb-4">아이템 목록</h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {items.map((item) => {
           return (
             <div key={item.name}>
-              <div className="border rounded p-4">
+              <div className="border rounded p-4 min-h-[250px]">
                 <Link href={`/items/${item.name}`}>
                   <Image
                     width={100}
