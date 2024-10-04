@@ -1,18 +1,13 @@
 import ChampionDetail from "@/components/ChampionDetail";
+import { Champion } from "@/types/champion";
 import { getChampionsDetail } from "@/server-action";
 
-// type Props = {
-//   params: {
-//     id: string;
-//   };
-// };
-
 const ChampionDetailPage = async ({ params }: { params: { id: string } }) => {
-  const data = await getChampionsDetail(params.id);
+  const data: Champion = await getChampionsDetail(params.id);
 
   return (
     <div>
-      <ChampionDetail data={[data]} />
+      <ChampionDetail data={data} />
     </div>
   );
 };

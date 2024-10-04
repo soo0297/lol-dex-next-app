@@ -44,6 +44,7 @@ export interface Champion {
   key: string;
   name: string;
   title: string;
+  lore: string;
   blurb: string;
   info: ChampionInfo;
   image: ChampionImage;
