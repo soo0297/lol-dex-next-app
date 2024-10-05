@@ -2,7 +2,13 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["ddragon.leagueoflegends.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ddragon.leagueoflegends.com",
+        pathname: "**",
+      },
+    ],
   },
 };
 

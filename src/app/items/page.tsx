@@ -15,16 +15,14 @@ const ItemListPage = async () => {
           return (
             <div key={item.name}>
               <div className="border rounded p-4 min-h-[250px]">
-                <Link href={`/items/${item.name}`}>
-                  <Image
-                    width={100}
-                    height={100}
-                    src={`${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/img/item/${item.image.full}`}
-                    alt={item.name}
-                  />
-                  <h2 className="mt-2 text-xl font-semibold">{item.name}</h2>
-                  <p className="text-gray-500">{item.plaintext}</p>
-                </Link>
+                <Image
+                  width={100}
+                  height={100}
+                  src={`${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/img/item/${item.image.full}`}
+                  alt={item.name}
+                />
+                <h2 className="mt-2 text-xl font-semibold">{item.name}</h2>
+                <p className="text-gray-500">{item.plaintext}</p>
               </div>
             </div>
           );

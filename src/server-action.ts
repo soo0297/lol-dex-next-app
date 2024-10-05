@@ -1,6 +1,5 @@
 "use server";
 
-import { get } from "http";
 import { ChampionTable } from "./types/champion";
 import { Item } from "./types/item";
 
