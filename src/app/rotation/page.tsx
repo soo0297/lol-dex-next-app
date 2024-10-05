@@ -9,6 +9,7 @@ const getChampionRotation = async () => {
 };
 
 const ChampionRotationPage = async () => {
+  const version = await getVersion();
   const champions = await getChampions();
   const rotation = await getChampionRotation();
 
@@ -16,13 +17,14 @@ const ChampionRotationPage = async () => {
     return rotation.includes(Number(champion.key));
   });
 
-  const version = getVersion();
   // console.log("test", test);
 
   return (
     <div>
-      <div>
-        <h2>무료 챔피언 목록</h2>
+      <h2 className="text-red-500 text-2xl font-bold mb-4 mt-28">
+        무료 챔피언 목록
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {test.map((champion) => {
           return (
             <div key={champion.id}>
@@ -44,9 +46,6 @@ const ChampionRotationPage = async () => {
           );
         })}
       </div>
-      {/* <div>
-        <h2>새로운 유저를 위한 무료 챔피언 목록</h2>
-      </div> */}
     </div>
   );
 };

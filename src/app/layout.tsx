@@ -37,7 +37,7 @@ export default function RootLayout({
             <Link href={"/rotation"}>챔피언 로테이션</Link>
           </nav>
         </header>
-        <main className="container mx-auto mt-10">{children}</main>
+        <main className="container mx-auto mt-10 mb-10">{children}</main>
         {/* <footer className="bg-gray-800 p-4 mt-8 fixed bottom-0 w-full">
           <div className="container mx-auto text-center text-white text-sm">
             [Your Product Name] is not endorsed by Riot Games and does not

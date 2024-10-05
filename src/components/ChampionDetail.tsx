@@ -1,10 +1,9 @@
-import { getChampionsDetail } from "@/server-action";
 import { Champion } from "@/types/champion";
 import Image from "next/image";
 
 const ChampionDetail = ({ data }: { data: Champion }) => {
   return (
-    <div>
+    <div className="mt-28">
       <Image
         width={600}
         height={600}

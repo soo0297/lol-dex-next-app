@@ -1,7 +1,6 @@
 import { getItems, getVersion } from "@/server-action";
 import { Item } from "@/types/item";
 import Image from "next/image";
-import Link from "next/link";
 
 const ItemListPage = async () => {
   const version = await getVersion();
@@ -9,7 +8,9 @@ const ItemListPage = async () => {
 
   return (
     <div>
-      <h1 className="text-red-500 text-2xl font-bold mb-4">아이템 목록</h1>
+      <h1 className="text-red-500 text-2xl font-bold mb-4 mt-28">
+        아이템 목록
+      </h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {items.map((item) => {
           return (
