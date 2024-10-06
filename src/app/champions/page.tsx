@@ -1,4 +1,4 @@
-import { getChampions, getVersion } from "@/server-action";
+import { getChampions, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -1,7 +1,7 @@
 "use server";
 
-import { ChampionTable } from "./types/champion";
-import { Item } from "./types/item";
+import { ChampionTable } from "../types/champion";
+import { Item } from "../types/item";
 
 // 버전정보 요청
 export async function getVersion() {

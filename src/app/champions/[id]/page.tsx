@@ -1,6 +1,6 @@
 import ChampionDetail from "@/components/ChampionDetail";
 import { Champion } from "@/types/champion";
-import { getChampionsDetail } from "@/server-action";
+import { getChampionsDetail } from "@/utils/serverApi";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const data: Champion = await getChampionsDetail(params.id);
