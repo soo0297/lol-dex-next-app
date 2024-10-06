@@ -18,7 +18,7 @@ export default async function ChampionListPage() {
               <div className="border rounded p-4">
                 <Link href={`/champions/${champion.id}`}>
                   <Image
-                    width={100}
+                    width={150}
                     height={100}
                     src={`${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/img/champion/${champion.image.full}`}
                     alt={champion.title}
