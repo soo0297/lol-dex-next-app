@@ -16,7 +16,12 @@ export async function getVersion() {
 export async function getChampions() {
   const version = await getVersion();
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion.json`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion.json`,
+    {
+      next: {
+        revalidate: 86400,
+      },
+    }
   );
   const data: ChampionTable = await res.json();
   const champion = Object.values(data.data);
@@ -27,7 +32,8 @@ export async function getChampions() {
 export async function getChampionsDetail(id: string) {
   const version = await getVersion();
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/cdn/${version}/data/ko_KR/champion/${id}.json`,
+    { cache: "no-store" }
   );
   const data = await res.json();
   const championDetail = data.data[id];

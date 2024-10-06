@@ -17,8 +17,6 @@ const ChampionRotationPage = async () => {
     return rotation.includes(Number(champion.key));
   });
 
-  // console.log("test", test);
-
   return (
     <div>
       <h2 className="text-red-500 text-2xl font-bold mb-4 mt-28">
