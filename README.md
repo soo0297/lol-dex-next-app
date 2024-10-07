@@ -43,7 +43,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ⏲️ 2024.10.02(수) ~ 2024.10.08(화)
 
-## 📜 프로젝트 파일 구조
+## 프로젝트 파일 구조
 
 ```
 📦public
@@ -81,7 +81,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
       ┗ 📜serverApi.ts
 ```
 
-## 💜 주요기능
+## 주요기능
 
 #### 1. Next.js와 TypeScript를 사용하여 프로젝트를 생성
 
@@ -109,7 +109,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - 최종 결과물에 any타입은 허용하지 않도록 타입 정의
 - vercel로 배포
 
-## 📚️ 기술스택
+## 기술스택
 
 ### ✔️ Language
 
