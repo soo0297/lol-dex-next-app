@@ -24,10 +24,10 @@ const ChampionRotationPage = () => {
       const version = await getVersion();
       const data = await getChampions();
       const rotation = await getChampionRotation();
-      if ("message" in data) {
+      if (data && "message" in data) {
         return alert(data.message);
       }
-      if ("message" in rotation) {
+      if (rotation && "message" in rotation) {
         return alert(rotation.message);
       }
       setChampions(data);

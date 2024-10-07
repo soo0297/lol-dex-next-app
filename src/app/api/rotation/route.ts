@@ -19,6 +19,6 @@ export async function GET() {
     // console.log("성공:", result);
     return NextResponse.json(result);
   } catch (error) {
-    console.error("실패:", error);
+    return console.error("실패:", error);
   }
 }
