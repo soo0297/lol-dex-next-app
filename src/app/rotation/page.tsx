@@ -14,7 +14,7 @@ const ChampionRotationPage = () => {
 
   useEffect(() => {
     const getChampionRotation = async () => {
-      const data = await fetch(`http://localhost:3000/api/rotation`);
+      const data = await fetch(`/api/rotation`);
       const result: championRotation = await data?.json();
 
       return result.freeChampionIds;
