@@ -27,6 +27,7 @@ const ChampionRotationPage = () => {
       if (data && "message" in data) {
         return alert(data.message);
       }
+      console.log("rotation", rotation);
       if (rotation && "message" in rotation) {
         return alert(rotation.message);
       }
@@ -40,7 +41,8 @@ const ChampionRotationPage = () => {
   }, []);
 
   const test = Object.values(champions).filter((champion) => {
-    return rotation.includes(Number(champion.key));
+    // rotation이 undefined나 null일 경우 빈 배열을 사용
+    return (rotation ?? []).includes(Number(champion.key));
   });
 
   return (
