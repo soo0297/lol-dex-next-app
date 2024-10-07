@@ -17,7 +17,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "리그 오브 레전드 정보 앱",
   description: "리그 오브 레전드 정보를 나타내는 next.js로 만든 앱입니다.",
-  icons: { icon: "../public/icon.jpg" },
+  icons: { icon: "/images/icon.jpg" },
 };
 
 export default function RootLayout({

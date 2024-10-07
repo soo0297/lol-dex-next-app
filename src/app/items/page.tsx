@@ -1,10 +1,12 @@
-import { Item } from "@/types/item";
 import { getItems, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 
 const ItemListPage = async () => {
   const version = await getVersion();
-  const items: Item[] = await getItems();
+  const items = await getItems();
+  if ("message" in items) {
+    return alert(items.message);
+  }
 
   return (
     <div>
