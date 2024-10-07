@@ -1,4 +1,4 @@
-# <개인 프로젝트> 리그 오브 레전드(LOL) 정보 앱 만들기
+# <개인 프로젝트> 리그 오브 레전드(LoL) 정보 앱 만들기
 
 ### [ Vercel 배포링크 바로가기 ](https://lol-dex-next-app.vercel.app/)
 
