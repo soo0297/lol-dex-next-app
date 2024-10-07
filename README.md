@@ -12,9 +12,9 @@
 6. [기술스택](#기술스택)
 7. [Trouble Shooting](#trouble-shooting)
 
-## 👨‍🏫
+## 프로젝트 소개
 
-**프로젝트 소개**
+👨‍🏫
 
 - 주제 : 리그 오브 레전드(LoL)의 챔피언, 아이템, 무료 챔피언 로테이션 정보를 보여주는 웹 애플리케이션 만들기
 - 내용 : Next.js와 TypeScript를 사용하여, Riot Games의 API와 Data Dragon을 활용하여 LoL의 다양한 데이터를 조회하고 화면에 표시하고, 사용자와 상호작용하는 웹 애플리케이션을 만드는 방법을 연습할 수 있다.
@@ -39,9 +39,9 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## ⏲️ 개발기간
+## 개발기간
 
-- 2024.10.02(수) ~ 2024.10.08(화)
+⏲️ 2024.10.02(수) ~ 2024.10.08(화)
 
 ## 📜 프로젝트 파일 구조
 
