@@ -1,17 +1,43 @@
+"use client";
+
+import { Champion } from "@/types/champion";
+import { championRotation } from "@/types/championRotation";
 import { getChampions, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const getChampionRotation = async () => {
-  const data = await fetch(`http://localhost:3000/api/rotation`);
-  const result = await data?.json();
-  return result.freeChampionIds;
-};
+const ChampionRotationPage = () => {
+  const [version, setVersion] = useState();
+  const [champions, setChampions] = useState<Champion[]>([]);
+  const [rotation, setRotation] = useState<number[]>([]);
 
-const ChampionRotationPage = async () => {
-  const version = await getVersion();
-  const champions = await getChampions();
-  const rotation = await getChampionRotation();
+  useEffect(() => {
+    const getChampionRotation = async () => {
+      const data = await fetch(`http://localhost:3000/api/rotation`);
+      const result: championRotation = await data?.json();
+
+      return result.freeChampionIds;
+    };
+
+    const handleSetData = async () => {
+      const version = await getVersion();
+      const data = await getChampions();
+      const rotation = await getChampionRotation();
+      if ("message" in data) {
+        return alert(data.message);
+      }
+      if ("message" in rotation) {
+        return alert(rotation.message);
+      }
+      setChampions(data);
+      setVersion(version);
+      setRotation(rotation);
+    };
+
+    handleSetData();
+    getChampionRotation();
+  }, []);
 
   const test = Object.values(champions).filter((champion) => {
     return rotation.includes(Number(champion.key));

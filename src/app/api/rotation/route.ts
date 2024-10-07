@@ -16,7 +16,7 @@ export async function GET() {
       }
     );
     const result = await res.json();
-    console.log("성공:", result);
+    // console.log("성공:", result);
     return NextResponse.json(result);
   } catch (error) {
     console.error("실패:", error);

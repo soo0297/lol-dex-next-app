@@ -2,9 +2,14 @@ import { getChampions, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 86400;
+
 export default async function ChampionListPage() {
   const version = await getVersion();
   const champions = await getChampions();
+  if ("message" in champions) {
+    return alert(champions.message);
+  }
 
   return (
     <div>
