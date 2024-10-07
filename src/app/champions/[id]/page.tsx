@@ -5,7 +5,7 @@ import { getChampionsDetail } from "@/utils/serverApi";
 export async function generateMetadata({ params }: { params: { id: string } }) {
   const data: Champion = await getChampionsDetail(params.id);
   return {
-    title: `${data.name}-My Riot App`,
+    title: `${data.name}-상세정보`,
     description: `${data.name}의 상세 정보를 나타내는 페이지입니다.`,
   };
 }
