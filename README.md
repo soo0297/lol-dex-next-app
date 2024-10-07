@@ -139,11 +139,7 @@ Git을 이용한 분산버전관리(DVCS)
 
 ## Trouble Shooting
 
-### 1. 무료 챔피언 로테이션 정보 불러오기
-
-<details>
-<summary>펼쳐보기</summary>
-<div markdown="1">
+### 1. 🌟무료 챔피언 로테이션 정보 불러오기🌟
 
 ### 1) 문제발생
 
@@ -201,15 +197,7 @@ champions의 숫자인 key를 불러오기 위해 배열에서 객체를 접근�
 
 ![](https://github.com/user-attachments/assets/51eab5a9-2d97-4225-96dc-c65419ab2cce)
 
- <br>
-</div>
-</details>
-
-### 2. 파비콘(Favicon) 이미지파일 위치
-
-<details>
-<summary>펼쳐보기</summary>
-<div markdown="1">
+### 2. 🌟파비콘(Favicon) 이미지파일 위치🌟
 
 ### 1) 문제발생
 
@@ -243,15 +231,7 @@ export const metadata: Metadata = {
 
 (꼭 기존 프로젝트에 존재하던 Favicon.ico파일은 삭제할 것. 삭제하지 않으면 우선으로 반영되어 배포 시 반영이 안됨.)
 
- <br>
-</div>
-</details>
-
-### 3. any타입 유무 확인
-
-<details>
-<summary>펼쳐보기</summary>
-<div markdown="1">
+### 3. 🌟any타입 유무 확인🌟
 
 ### 1) 문제발생
 
@@ -269,7 +249,3 @@ export const metadata: Metadata = {
 ### 4) 결과
 
 ![타입선언부분](https://github.com/user-attachments/assets/1518e3c0-d102-48fa-99b9-a2e41b76af3e)
-
- <br>
-</div>
-</details>
