@@ -24,14 +24,15 @@ const ChampionRotationPage = () => {
       const version = await getVersion();
       const data = await getChampions();
       const rotation = await getChampionRotation();
-      console.log("data", data);
+
       if (data && "message" in data) {
         return alert(data.message);
       }
-      console.log("rotation", rotation);
+
       if (rotation && "message" in rotation) {
         return alert(rotation.message);
       }
+
       setChampions(data);
       setVersion(version);
       setRotation(rotation);
