@@ -18,6 +18,8 @@ export default function Home() {
       <div className="flex justify-center items-center gap-6 mt-10">
         <Link href={"/champions"}>
           <Image
+            width={800}
+            height={400}
             src="/images/blood_moon_sivir.jpg"
             alt="Blood moon sivir"
             className="w-[800px]"
@@ -28,6 +30,8 @@ export default function Home() {
         </Link>
         <Link href={"/rotation"}>
           <Image
+            width={800}
+            height={400}
             src="/images/sivir.jpg"
             alt="Blood moon sivir"
             className="w-[800px]"
@@ -38,6 +42,8 @@ export default function Home() {
         </Link>
         <Link href={"/items"}>
           <Image
+            width={800}
+            height={400}
             src="/images/snowstorm_sivir.jpg"
             alt="Blood moon sivir"
             className="w-[800px]"

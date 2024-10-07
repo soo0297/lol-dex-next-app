@@ -15,10 +15,7 @@ const ChampionDetail = ({ data }: { data: Champion }) => {
       </div>
       <div>
         <h3>스탯</h3>
-        <ul
-          role="list"
-          className="marker:text-red-500 list-disc pl-5  text-red-500"
-        >
+        <ul role="list" className="text-white text-base list-disc pl-5 ">
           <li>공격력: {data.info.attack}</li>
           <li>방어력: {data.info.defense}</li>
           <li>마법력: {data.info.magic}</li>
